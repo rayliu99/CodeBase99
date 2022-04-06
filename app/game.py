@@ -7,6 +7,7 @@ from random import choice
 
 
 def determine_winner(user_choice, computer_choice):
+
     """
     This function test which player wins the game.
     The param of this function are two strings of "rock", "paper", "scissors".
@@ -15,6 +16,9 @@ def determine_winner(user_choice, computer_choice):
 
     Invoke like this: determine_winner(paper, scissors)
     """
+
+    #return "paper"
+
     winners = {
         "rock": {
             "rock": None,

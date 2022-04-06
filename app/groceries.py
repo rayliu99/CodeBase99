@@ -21,10 +21,8 @@ else:
 
 from pandas import read_csv
 
-#reads the csv file into products variable
-products = read_csv(csv_filepath)
 #pandas transforms the data into a list of dictionaries
-products = products.to_dict('records')
+products = read_csv(csv_filepath).to_dict('records')
 
 
 
@@ -34,12 +32,9 @@ print("---------")
 print("THERE ARE", len(products), "PRODUCTS:")
 print("---------")
 
-for p in products:
-    print("..." + p["name"] + "   " + to_usd(p["price"]))
-
-
 all_prices = []
 for p in products:
+    print("..." + p["name"] + "   " + to_usd(p["price"]))
     all_prices.append(float(p["price"]))
 
 import statistics
